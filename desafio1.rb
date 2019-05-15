@@ -13,13 +13,13 @@ while option != 'salir' do
     puts "Ingrese 'jugar' para generar 5 cartas.\n Ingrese 'mostrar' para mostrar sus 5 cartas.\n Ingrese'salir' para salir del programa."
     option = gets.chomp.downcase
     if option == 'jugar'
-        cards =[]
+        cards = []
         5.times do
             cards.push(Card.new)
         end
         puts 'Se generó una mano nueva exitosamente'
     elsif option == 'mostrar'
-        if cards == []
+        if cards == nil
             puts 'Su mano está vacía'
         else
             cards.each_with_index do |ele, i|
